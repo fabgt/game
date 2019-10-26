@@ -23,3 +23,6 @@ age=input("how old are you? ")
 print(age)
 #____
 print(f"First argument is: {first_Arg}, second argument is: {sec_Arg}")
+prompt="> "
+height=input("""How tall are you?
+>""")
