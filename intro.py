@@ -10,3 +10,12 @@ newVar = myVar1 > myVar2
 print("result:",newVar)
 car_brand = 'volvo'
 print(car_brand)
+#f-string example
+a = f"My favorite brand is {car_brand}"
+print(f"why do you keep saying '{a}'?")
+
+new_f_strg = "This is my new {}"
+bool = False
+
+print(new_f_strg.format(bool))
+print(a + new_f_strg.format(bool))
