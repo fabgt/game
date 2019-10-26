@@ -19,3 +19,13 @@ bool = False
 
 print(new_f_strg.format(bool))
 print(a + new_f_strg.format(bool))
+
+var1="j"
+var2="'"
+var3="a"
+var4="i"
+print(var1+var2+var3+var4)
+
+formatter = "{} {} {} {}"
+
+print(formatter.format(1, 2, 3, 4))
