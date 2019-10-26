@@ -1,24 +1,12 @@
 import os
+from sys import argv
 
-card_red = 'heart'
-#f-string example
-a = f"My favorite brand is {card_red}"
-print(f"why do you keep saying '{a}'?")
-#____________
-#Use format method
-new_f_strg = "This is my new {}"
-bool = False
-print(new_f_strg.format(bool))
-#_____________
+script, first_Arg, sec_Arg = argv
 
-formatter = "{} {} {} {}"
+formatter = "{} {}"
 print(formatter.format(
         "Try",
-        "This",
-        "Motha",
-        "****ker"
-))
-
+        "****ker"))
 #_______________
 #Jumping lines
 tryVar = "Jan\nFeb\nMarch"
@@ -27,17 +15,11 @@ print("""
 Here is some text
 """)
 #______________
-
-fat_at="""
-I'll write something with a list:
-\t* cat
-\t* cat
-"""
-print(fat_at)
-#____________
 #Asking QUESTION:
 print("What is your name?", end=' ')
 name=input()
 print(f"Hello {name}")
 age=input("how old are you? ")
 print(age)
+#____
+print(f"First argument is: {first_Arg}, second argument is: {sec_Arg}")
