@@ -1,31 +1,43 @@
 import os
-#os.system("ls -l")#
 
-#print("Math example", 5 / 6 < 1)
-#print("Math example", 50 % 6)
-
-myVar1 = 12
-myVar2 = 10
-newVar = myVar1 > myVar2
-print("result:",newVar)
-car_brand = 'volvo'
-print(car_brand)
+card_red = 'heart'
 #f-string example
-a = f"My favorite brand is {car_brand}"
+a = f"My favorite brand is {card_red}"
 print(f"why do you keep saying '{a}'?")
-
+#____________
+#Use format method
 new_f_strg = "This is my new {}"
 bool = False
-
 print(new_f_strg.format(bool))
-print(a + new_f_strg.format(bool))
-
-var1="j"
-var2="'"
-var3="a"
-var4="i"
-print(var1+var2+var3+var4)
+#_____________
 
 formatter = "{} {} {} {}"
+print(formatter.format(
+        "Try",
+        "This",
+        "Motha",
+        "****ker"
+))
 
-print(formatter.format(1, 2, 3, 4))
+#_______________
+#Jumping lines
+tryVar = "Jan\nFeb\nMarch"
+print(tryVar)
+print("""
+Here is some text
+""")
+#______________
+
+fat_at="""
+I'll write something with a list:
+\t* cat
+\t* cat
+"""
+print(fat_at)
+#____________
+#Asking QUESTION:
+print("What is your name?", end=' ')
+name=input()
+print(f"Hello {name}")
+age=input("how old are you? ")
+print(age)
