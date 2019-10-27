@@ -1,23 +1,21 @@
-from sys import argv
-from os.path import exists
+#this one is like your scripts with argv
+def print_two(*args):
+    arg1, arg2 = args
+    print(f"arg1: {arg1}, arg2: {arg2}")
 
-script, from_file, to_file = argv
+#ok, that *args is actually pointless, we can just do this
+def print_two_again(arg1, arg2):
+    print(f"arg1: {arg1}, arg2: {arg2}")
 
-print(f"Copying from {from_file} to {to_file}")
+#this just takes one argument
+def print_one(arg1):
+    print(f"arg1: {arg1}")
 
-#we could do these two on one line, how?
-in_file = open(from_file)
-indata = in_file.read()
+#this one takes no argument
+def print_none():
+    print("I got nothing.")
 
-print(f"The input file is {len(indata)} bytes long")
-
-print(f"Does the output file exist? {exists(to_file)}")
-print("Ready, hit Return to continue, CTRL+C to abort.")
-
-out_file = open(to_file, 'w')
-out_file.write(indata*2)
-
-print("Alright, all done.")
-
-out_file.close()
-in_file.close()
+print_two("Zed","Shaw")
+print_two_again("Zed","Shaw")
+print_one("First!")
+print_none()    
