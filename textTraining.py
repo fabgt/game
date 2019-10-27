@@ -4,12 +4,31 @@ script, filename = argv
 
 txt = open(filename)
 
-print(f"Here's your file {filename}:")
-print(txt.read())
+print(f"We are going to erase {filename}.")
+print("If you don't want that, hit CTRL+C (^C).")
+print("If you do want that, hit RETURN.")
 
-print("Type the file name again:")
-file_again=input("> ")
+input("?")
 
-txt_again=open(file_again)
+print("Opening the file...")
+target=open(filename,'w')
 
-print(txt_again.read())
+print("Truncating the file. Goodbye!")
+target.truncate()
+
+print("Now I'm going to ask you for three line.")
+line1=input("line 1: ")
+line2=input("line 2: ")
+line3=input("line 3: ")
+
+print("I'm going to write these to the file.")
+
+target.write(line1)
+target.write("\n")
+target.write(line2)
+target.write("\n")
+target.write(line3)
+target.write("\n")
+
+print("And finally, we close it.")
+target.close()
